@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assignment Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Student Assignment Submission Portal</h1>
+        <div class="logo-container">
+            <img src="uemlogo.png" alt="UEM Logo" height="150" width="200">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#submit-assignment">Upload Assignment</a></li>
+                <li><a href="#assignment-records">View Submissions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Assignment Submission Section -->
+    <section id="submit-assignment" class="form-section">
+        <h2>Upload Your Assignment</h2>
+        <form id="assignmentForm" enctype="multipart/form-data">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+        
+            <label for="enrollmentNumber">Enrollment Number:</label>
+            <input type="text" id="enrollmentNumber" name="enrollmentNumber" required>
+        
+            <label for="assignmentTitle">Assignment Title:</label>
+            <input type="text" id="assignmentTitle" name="assignmentTitle" required>
+        
+            <label for="submissionDate">Submission Date:</label>
+            <input type="date" id="submissionDate" name="submissionDate" required>
+        
+            <label for="assignmentFile">Upload Assignment:</label>
+            <input type="file" id="assignmentFile" name="assignmentFile" required>
+        
+            <button type="submit">Submit Assignment</button>
+        </form>
+    </section>
+
+    <section id="assignment-records" class="records-section">
+        <h2>Assignment Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Enrollment No.</th>
+                    <th>Assignment Title</th>
+                    <th>Submission Date</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody id="records-body">
+                <!-- Records will be displayed here -->
+            </tbody>
+        </table>    
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Student Assignment Portal | Powered by University of Engineering and Management</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
